@@ -1,0 +1,42 @@
+{
+  "optimal_path": [
+    "attacker",
+    "apache_2.4.25",
+    "CVE-2017-7659",
+    "webserver_access",
+    "root_access"
+  ],
+  "optimal_reward": 104.425,
+  "all_paths": [
+    {
+      "path": [
+        "attacker",
+        "apache_2.4.25",
+        "CVE-2017-7659",
+        "webserver_access",
+        "root_access"
+      ],
+      "reward": 104.425
+    },
+    {
+      "path": [
+        "attacker",
+        "apache_2.4.25",
+        "CVE-2016-8743",
+        "webserver_access",
+        "root_access"
+      ],
+      "reward": 104.425
+    },
+    {
+      "path": [
+        "attacker",
+        "apache_2.4.25",
+        "CVE-2016-4975",
+        "webserver_access",
+        "root_access"
+      ],
+      "reward": 103.208
+    }
+  ]
+}

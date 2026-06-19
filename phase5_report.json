@@ -1,0 +1,13 @@
+{
+  "optimal_path": [
+    "attacker",
+    "apache_2.4.25",
+    "CVE-2017-7659",
+    "webserver_access",
+    "root_access"
+  ],
+  "reward": 104.425,
+  "findings": [
+    "RC script generated successfully"
+  ]
+}

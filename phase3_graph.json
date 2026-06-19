@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    "attacker",
+    "apache_2.4.25",
+    "webserver_access",
+    "root_access",
+    "CVE-2017-7659",
+    "CVE-2016-8743",
+    "CVE-2016-4975"
+  ],
+  "matrix": [
+    [
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      0,
+      -1,
+      -1,
+      2.925,
+      2.925,
+      1.708
+    ],
+    [
+      -1,
+      -1,
+      0,
+      100,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1.5,
+      -1,
+      0,
+      -1,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1.5,
+      -1,
+      -1,
+      0,
+      -1
+    ],
+    [
+      -1,
+      -1,
+      1.5,
+      -1,
+      -1,
+      -1,
+      0
+    ]
+  ],
+  "node_details": {
+    "attacker": {
+      "type": "attacker",
+      "reward": 0.01
+    },
+    "apache_2.4.25": {
+      "type": "service",
+      "reward": 0
+    },
+    "webserver_access": {
+      "type": "access",
+      "reward": 1.5
+    },
+    "root_access": {
+      "type": "goal",
+      "reward": 100
+    },
+    "CVE-2017-7659": {
+      "type": "vulnerability",
+      "reward": 2.925,
+      "severity": "HIGH",
+      "base_score": 7.5
+    },
+    "CVE-2016-8743": {
+      "type": "vulnerability",
+      "reward": 2.925,
+      "severity": "HIGH",
+      "base_score": 7.5
+    },
+    "CVE-2016-4975": {
+      "type": "vulnerability",
+      "reward": 1.708,
+      "severity": "MEDIUM",
+      "base_score": 6.1
+    }
+  }
+}

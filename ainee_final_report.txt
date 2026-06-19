@@ -1,0 +1,62 @@
+============================================================
+AINEE — AUTOMATED PENETRATION TEST REPORT
+Generated: 2026-05-16 02:57:47
+============================================================
+
+TARGET
+----------------------------------------
+Host:     10.100.7.250
+OS:       macOS 11 (Big Sur)
+Service:  Apache httpd 2.4.25 (port 8080)
+
+VULNERABILITIES FOUND
+----------------------------------------
+  CVE-2017-7659
+    Severity:      HIGH
+    Base score:    7.5
+    Exploit score: 3.9
+    Score_vul:     2.925
+
+  CVE-2016-8743
+    Severity:      HIGH
+    Base score:    7.5
+    Exploit score: 3.9
+    Score_vul:     2.925
+
+  CVE-2016-4975
+    Severity:      MEDIUM
+    Base score:    6.1
+    Exploit score: 2.8
+    Score_vul:     1.708
+
+
+DQN OPTIMAL ATTACK PATH
+----------------------------------------
+  attacker -> apache_2.4.25 -> CVE-2017-7659 -> webserver_access -> root_access
+  Total reward: 104.425
+
+ALL PATHS RANKED
+----------------------------------------
+  Path 1 <- OPTIMAL: attacker -> apache_2.4.25 -> CVE-2017-7659 -> webserver_access -> root_access
+    Reward: 104.425
+  Path 2: attacker -> apache_2.4.25 -> CVE-2016-8743 -> webserver_access -> root_access
+    Reward: 104.425
+  Path 3: attacker -> apache_2.4.25 -> CVE-2016-4975 -> webserver_access -> root_access
+    Reward: 103.208
+
+EXPLOITATION RESULT
+----------------------------------------
+  Module executed successfully against target
+  No mod_userdir users found (expected for DVWA)
+  Target confirmed reachable and responsive
+
+RECOMMENDATIONS
+----------------------------------------
+  1. Upgrade Apache from 2.4.25 to latest stable version
+  2. Disable mod_userdir if not required
+  3. Enable HTTP/2 security patches (CVE-2017-7659)
+  4. Implement strict HTTP header validation (CVE-2016-4975)
+
+============================================================
+END OF REPORT
+============================================================

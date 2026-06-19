@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Sat May 16 02:41:22 2026 as: /usr/lib/nmap/nmap -sV -O -p- -T4 -oX scan_results.xml 10.100.7.250 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sV -O -p- -T4 -oX scan_results.xml 10.100.7.250" start="1778913682" startstr="Sat May 16 02:41:22 2026" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1778913682" endtime="1778913684"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="10.100.7.250" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65534">
+<extrareasons reason="reset" count="65534" proto="tcp" ports="1-21,23-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 5" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41618"/>
+<osmatch name="Linux 2.6.32" accuracy="100" line="59030">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 6.2" accuracy="100" line="71749">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:6</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1697829" lastboot="Sun Apr 26 11:04:15 2026"/>
+<distance value="0"/>
+<tcpsequence index="263" difficulty="Good luck!" values="DB6C4C96,29CF9F58,2B448EAD,365C3B51,CC6594DC,C8F74187"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="6532CB91,6532CBF8,6532CC5F,6532CCC5,6532CD2E,6532CD92"/>
+<times srtt="78" rttvar="39" to="100000"/>
+</host>
+<runstats><finished time="1778913684" timestr="Sat May 16 02:41:24 2026" summary="Nmap done at Sat May 16 02:41:24 2026; 1 IP address (1 host up) scanned in 2.01 seconds" elapsed="2.01" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
