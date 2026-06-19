@@ -31,6 +31,14 @@ To develop an autonomous system capable of emulating the reconnaissance and deci
 - Simulating controlled attack progression
 - Generating comprehensive security reports
 
+
+# Install dependencies
+pip install -r requirements.txt
+
+
+# Run the application
+python main.py
+
 ## Tech Stack
 
 - Python
